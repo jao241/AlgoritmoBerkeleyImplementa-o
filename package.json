@@ -7,7 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "main": "nodemon src/timeControlServer.js",
-    "relogio01": "nodemon src/relogios/relogio01.js"
+    "relogio01": "nodemon src/relogios/relogio01.js",
+    "relogio02": "nodemon src/relogios/relogio02.js",
+    "relogio03": "nodemon src/relogios/relogio03.js",
+    "relogio04": "nodemon src/relogios/relogio04.js",
+    "relogio05": "nodemon src/relogios/relogio05.js"
   },
   "keywords": [],
   "author": "",
