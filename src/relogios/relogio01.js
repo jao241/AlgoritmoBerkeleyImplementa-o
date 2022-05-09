@@ -7,7 +7,7 @@ const wss = new WebSocketServer({
 let horario = new Date(2022, 5, 8, 15, 20);
 
 wss.on("listening", () => {
-    console.log("Servidor 02 rodando!\n");
+    console.log("Relógio 01 rodando!\n");
     console.log(`Horário inicial: ${horario}\n`)
 })
 
