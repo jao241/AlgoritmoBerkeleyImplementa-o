@@ -8,19 +8,15 @@ const wss = new WebSocketServer( {
     port: 8080
 });
 
-const relogio01 = new WebSocket("ws://localhost:8081");
-const relogio02 = new WebSocket("ws://localhost:8082");
-const relogio03 = new WebSocket("ws://localhost:8083");
-const relogio04 = new WebSocket("ws://localhost:8084");
-const relogio05 = new WebSocket("ws://localhost:8085");
 
-const serverList = [relogio01, relogio02, relogio03, relogio04, relogio05];
 
 let hora = new Date(2022, 5, 8, 15, 20);
 
 
 wss.on("listening", () => {
-    main();
+    setInterval(() => {
+        main()
+    }, 5000);
 });
 
 wss.on("connection", ws => {
@@ -28,6 +24,15 @@ wss.on("connection", ws => {
 })
 
 function main() {
+
+    const relogio01 = new WebSocket("ws://localhost:8081");
+    const relogio02 = new WebSocket("ws://localhost:8082");
+    const relogio03 = new WebSocket("ws://localhost:8083");
+    const relogio04 = new WebSocket("ws://localhost:8084");
+    const relogio05 = new WebSocket("ws://localhost:8085");
+
+    const serverList = [relogio01, relogio02, relogio03, relogio04, relogio05];
+
     console.info("Server 01 rodando!\n");
     console.log(`Horário inicial: ${hora}\n`);
 
